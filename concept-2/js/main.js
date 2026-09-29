@@ -1,4 +1,4 @@
-/* St. Pete Lawncare — Concept 2 interactions */
+/* St. Pete Lawncare: Concept 2 interactions */
 (function () {
   'use strict';
 

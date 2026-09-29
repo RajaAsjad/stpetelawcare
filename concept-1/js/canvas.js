@@ -1,4 +1,4 @@
-/* Interactive grass field for the hero — blades sway in a wind field and bend away from the pointer. */
+/* Interactive grass field for the hero: blades sway in a wind field and bend away from the pointer. */
 (function () {
   'use strict';
 

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   St. Pete Lawncare — Concept 1 "Gulf Coast Luxe"
+   St. Pete Lawncare: Concept 1 "Gulf Coast Luxe"
    ========================================================================== */
 
 :root {
@@ -172,7 +172,6 @@ em { font-style: italic; }
   color: var(--tropics);
   margin-bottom: 20px;
 }
-.eyebrow::before { content: ""; width: 34px; height: 1px; background: currentColor; }
 .section-dark .eyebrow { color: var(--leaf); }
 .eyebrow--gold, .section-dark .eyebrow--gold { color: var(--gold); }
 .eyebrow--blue { color: #1f7f96; }

@@ -1,4 +1,4 @@
-/* Hero canvas — sunlight rays + sprinkler water droplets (cursor acts as a sprinkler head) */
+/* Hero canvas: sunlight rays + sprinkler water droplets (cursor acts as a sprinkler head) */
 (function () {
   'use strict';
 
@@ -211,7 +211,7 @@
       ctx.globalAlpha = a;
       ctx.drawImage(sprite, d.x - gs / 2, d.y - gs / 2, gs, gs);
 
-      // sparkle — sun catching the droplet
+      // sparkle: sun catching the droplet
       var tw = Math.sin(time * 9 + d.tw);
       if (tw > 0.93 && d.kind !== 'splash') {
         var k = (tw - 0.93) / 0.07;
