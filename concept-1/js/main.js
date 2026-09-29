@@ -50,6 +50,9 @@
   window.addEventListener('resize', function () {
     if (window.innerWidth >= 1024 && mobileMenu.classList.contains('is-open')) menuBtn.click();
   });
+  mobileMenu.addEventListener('click', function (e) {
+    if (e.target.closest('a[href^="#"]') && mobileMenu.classList.contains('is-open')) menuBtn.click();
+  });
 
   /* ---------- Forms (Web3Forms) ---------- */
   var heroForm = document.getElementById('hero-form');

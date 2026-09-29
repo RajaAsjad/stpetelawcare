@@ -32,6 +32,9 @@
     window.addEventListener('resize', function () {
       if (window.innerWidth >= 1180 && !menu.hidden) setMenu(false);
     });
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a[href^="#"]')) setMenu(false);
+    });
   }
   $$('.m-acc-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {

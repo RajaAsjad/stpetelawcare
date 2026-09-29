@@ -188,15 +188,12 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 
 .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; border-radius: 999px; }
 .brand-logo {
-  width: 52px; height: 52px;
-  border-radius: 50%;
-  background: #fff;
-  padding: 2px;
-  box-shadow: 0 0 0 2px var(--mint-2);
+  display: block;
+  height: 52px;
   transition: transform .5s var(--ease-back);
 }
-.brand-logo img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
-.brand:hover .brand-logo { transform: rotate(-12deg) scale(1.05); }
+.brand-logo img { height: 100%; width: auto; }
+.brand:hover .brand-logo { transform: rotate(-5deg) scale(1.06); }
 .brand-name {
   font-family: var(--f-display);
   font-weight: 800;
@@ -1044,14 +1041,11 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 }
 .footer-grid { position: relative; display: grid; grid-template-columns: 1.15fr 1.45fr .8fr 1.15fr; gap: 40px; }
 .footer-logo {
-  width: 120px; height: 120px;
-  border-radius: 50%;
-  background: #fff;
-  padding: 4px;
+  width: 190px;
   margin-bottom: 18px;
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, .08);
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, .35));
 }
-.footer-logo img { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; }
+.footer-logo img { width: 100%; height: auto; }
 .footer-brand p { color: #c3d0e0; font-size: 15px; max-width: 280px; }
 .footer-h { font-family: var(--f-display); font-weight: 700; font-size: 1.2rem; color: var(--leaf); margin-bottom: 18px; letter-spacing: -.01em; }
 .footer-links { display: flex; flex-direction: column; gap: 10px; }
@@ -1165,7 +1159,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
   .topbar-note { font-size: 12.5px; }
   .nav-pill { height: 62px; gap: 8px; padding: 0 7px 0 6px; }
   .brand { gap: 8px; }
-  .brand-logo { width: 46px; height: 46px; }
+  .brand-logo { height: 44px; }
   .brand-name { font-size: 16px; }
   .btn-contact { font-size: 13.5px; padding: 10px 14px; }
   .burger { width: 44px; height: 44px; }
@@ -1223,3 +1217,6 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
   .svc-card { transform: none !important; }
   .js:not(.anim-ready) [data-intro] { opacity: 1; }
 }
+
+/* In-page anchor offset for the sticky header */
+section[id], #estimate { scroll-margin-top: 150px; }
