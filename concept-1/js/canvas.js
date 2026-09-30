@@ -11,9 +11,9 @@
 
   // Back → front. Back layers are cooler/darker to push them into the distance.
   var PALETTES = [
-    ['#17311f', '#1b3824', '#203f27', '#16301f'],
-    ['#2f5129', '#365c2e', '#3f6833', '#2c4c27'],
-    ['#4f783b', '#5a853f', '#6a9640', '#87b244']
+    ['#123018', '#18401e', '#1d4a24', '#15351b'],
+    ['#2a6b32', '#3CA348', '#348f40', '#25602c'],
+    ['#5aaa42', '#7AC145', '#6bb33a', '#4e9a38']
   ];
   var LAYER_SPEC = [
     { share: 0.36, hMin: 0.55, hMax: 1.0,  wMin: 3,  wMax: 5.5, flex: 0.55 },

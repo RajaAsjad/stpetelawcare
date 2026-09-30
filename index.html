@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#15345c">
+  <meta name="theme-color" content="#3CA348">
   <title>St. Pete Lawncare Redesign Concepts</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,20 +12,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Manrope,system-ui,sans-serif;background:#0b1f38;color:#fff;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px}
+    body{font-family:Manrope,system-ui,sans-serif;background:#F3F1ED;color:#030303;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px}
     header{text-align:center;margin-bottom:48px}
-    header img{width:200px;height:auto;margin-bottom:20px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.4))}
+    header img{width:220px;height:auto;margin-bottom:20px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.18))}
     h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.02em}
-    header p{color:#b8c4d6;margin-top:10px}
+    header p{color:#5c5148;margin-top:10px;max-width:560px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;width:100%;max-width:960px}
-    a.card{display:block;text-decoration:none;color:inherit;border-radius:24px;padding:32px;border:1px solid rgba(255,255,255,.12);background:#15345c;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s}
-    a.card:hover{transform:translateY(-6px);border-color:#87b244;box-shadow:0 24px 60px rgba(0,0,0,.35)}
-    .card.light{background:#fbfaf5;color:#15345c}
-    .tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#f9b91e;margin-bottom:14px}
-    .card.light .tag{color:#4f783b}
+    a.card{display:block;text-decoration:none;color:#F3F1ED;border-radius:24px;padding:32px;border:1px solid transparent;background:#030303;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s}
+    a.card:hover{transform:translateY(-6px);border-color:#7AC145;box-shadow:0 24px 60px rgba(0,0,0,.18)}
+    .card.light{background:#fff;color:#030303;border:2px solid #3CA348}
+    .tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#F16A24;margin-bottom:14px}
+    .card.light .tag{color:#3CA348}
     .card h2{font-size:26px;font-weight:800;margin-bottom:10px}
-    .card p{opacity:.8;line-height:1.6}
-    .go{margin-top:22px;font-weight:800;color:#87b244}
+    .card p{color:#5c5148;line-height:1.6}
+    a.card:not(.light) p{color:#e7e1d6}
+    .go{margin-top:22px;font-weight:800;color:#7AC145}
+    .card.light .go{color:#A86028}
     .card:hover .go span{transform:translateX(6px)}
     .go span{display:inline-block;transition:transform .3s}
   </style>
@@ -34,19 +36,19 @@
   <header>
     <img src="assets/images/logo.png" alt="St. Pete Lawncare">
     <h1>St. Pete Lawncare Redesign Concepts</h1>
-    <p>Same structure, content &amp; images, two new design directions.</p>
+    <p>Same page structure as the live site. New logo and brand colors throughout.</p>
   </header>
   <main class="grid">
     <a class="card" href="concept-1/">
       <span class="tag">Concept 1</span>
-      <h2>Gulf Coast Luxe</h2>
-      <p>Dark, cinematic &amp; editorial. Interactive grass canvas that bends away from your cursor.</p>
+      <h2>Brand Field</h2>
+      <p>Black and green, with orange calls to action. The new pelican logo leads the header. Grass still bends away from the cursor.</p>
       <div class="go">View concept <span>&rarr;</span></div>
     </a>
     <a class="card light" href="concept-2/">
       <span class="tag">Concept 2</span>
-      <h2>Sunshine Fresh</h2>
-      <p>Bright, modern bento layout. Sun-ray &amp; sprinkler canvas where your cursor sprays water.</p>
+      <h2>Sunshine Brand</h2>
+      <p>Cream page, green outline, orange buttons, and brown accents. The logo sits large in the header while the cursor sprays water.</p>
       <div class="go">View concept <span>&rarr;</span></div>
     </a>
   </main>

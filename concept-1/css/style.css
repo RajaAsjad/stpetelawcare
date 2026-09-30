@@ -1,30 +1,31 @@
 /* ==========================================================================
-   St. Pete Lawncare: Concept 1 "Gulf Coast Luxe"
+   St. Pete Lawncare: Concept 1 "Brand Field"
+   Black, brand green, and orange. Same page structure, new identity.
    ========================================================================== */
 
 :root {
-  --ink: #0b1f38;
-  --navy: #15345c;
-  --navy-2: #102a4a;
-  --tropics: #4f783b;
-  --leaf: #87b244;
-  --gold: #f9b91e;
-  --amber: #e67a28;
-  --wave: #299fbb;
-  --paper: #f6f3ec;
-  --paper-2: #ebe5d8;
+  --ink: #030303;
+  --navy: #145222;
+  --navy-2: #0d3a18;
+  --tropics: #3CA348;
+  --leaf: #7AC145;
+  --gold: #F16A24;
+  --amber: #A86028;
+  --wave: #3CA348;
+  --paper: #F3F1ED;
+  --paper-2: #e6e1d6;
   --white: #ffffff;
 
   --text-on-dark: rgba(255, 255, 255, 0.8);
   --text-on-dark-soft: rgba(255, 255, 255, 0.62);
-  --text-on-light: #3d4a5c;
+  --text-on-light: #2c2c2c;
   --line-dark: rgba(255, 255, 255, 0.12);
-  --line-light: rgba(11, 31, 56, 0.14);
+  --line-light: rgba(3, 3, 3, 0.12);
 
   --f-display: "Fraunces", "Times New Roman", serif;
   --f-body: "Manrope", "Segoe UI", sans-serif;
 
-  --top-h: 76px;
+  --top-h: 96px;
   --nav-h: 48px;
   --header-h: calc(var(--top-h) + var(--nav-h));
   --container: 1320px;
@@ -34,7 +35,7 @@
 }
 
 @media (max-width: 1023px) {
-  :root { --top-h: 66px; --nav-h: 0px; }
+  :root { --top-h: 78px; --nav-h: 0px; }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -174,7 +175,7 @@ em { font-style: italic; }
 }
 .section-dark .eyebrow { color: var(--leaf); }
 .eyebrow--gold, .section-dark .eyebrow--gold { color: var(--gold); }
-.eyebrow--blue { color: #1f7f96; }
+.eyebrow--blue { color: #A86028; }
 
 .display-2 {
   font-family: var(--f-display);
@@ -210,6 +211,7 @@ em { font-style: italic; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
+  border-bottom: 4px solid var(--tropics);
   transition: background-color 0.5s var(--ease-out), backdrop-filter 0.5s, box-shadow 0.5s;
 }
 .site-header::after {
@@ -223,7 +225,7 @@ em { font-style: italic; }
 }
 .site-header.is-scrolled,
 .site-header.menu-open {
-  background: rgba(11, 31, 56, 0.92);
+  background: rgba(3, 3, 3, 0.94);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   backdrop-filter: blur(16px) saturate(140%);
   box-shadow: 0 20px 40px -30px rgba(0, 0, 0, 0.8);
@@ -241,20 +243,13 @@ em { font-style: italic; }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
 .brand__logo {
   display: block;
-  height: 54px;
-  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+  height: 78px;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
   transition: transform 0.5s var(--ease-out);
 }
 .brand__logo img { height: 100%; width: auto; }
 .brand:hover .brand__logo { transform: rotate(-4deg) scale(1.06); }
-.brand__name {
-  font-family: var(--f-display);
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-  color: var(--white);
-  white-space: nowrap;
-}
+.brand__name { display: none; }
 .btn { white-space: nowrap; }
 
 .header-actions { display: flex; align-items: center; gap: 22px; }
@@ -421,7 +416,7 @@ em { font-style: italic; }
 .m-sub:first-child { margin-top: 4px; }
 .m-sub:last-child { margin-bottom: 8px; }
 .m-sub:hover { color: var(--white); border-left-color: var(--leaf); }
-.m-sub--all { color: #5cc3dc; font-weight: 700; }
+.m-sub--all { color: #7AC145; font-weight: 700; }
 .m-sub--all:hover { color: var(--leaf); }
 
 /* ==========================================================================
@@ -458,7 +453,7 @@ em { font-style: italic; }
   transition: box-shadow 0.25s, border-color 0.25s;
 }
 .lead-bar__fields input::placeholder { color: #5f6b7a; }
-.lead-bar__fields input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(249, 185, 30, 0.45); }
+.lead-bar__fields input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(241, 106, 36, 0.45); }
 .lead-bar__fields .lead-bar__zip { width: 110px; }
 .lead-bar__success { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; }
 
@@ -487,9 +482,9 @@ em { font-style: italic; }
 .hero__shade {
   position: absolute; inset: 0; z-index: -2;
   background:
-    radial-gradient(120% 80% at 80% 10%, rgba(249, 185, 30, 0.10), transparent 55%),
-    linear-gradient(90deg, rgba(11, 31, 56, 0.94) 0%, rgba(11, 31, 56, 0.78) 42%, rgba(11, 31, 56, 0.45) 100%),
-    linear-gradient(180deg, rgba(11, 31, 56, 0.7) 0%, rgba(11, 31, 56, 0.1) 30%, rgba(11, 31, 56, 0.35) 70%, rgba(11, 31, 56, 0.85) 100%);
+    radial-gradient(120% 80% at 80% 10%, rgba(241, 106, 36, 0.16), transparent 55%),
+    linear-gradient(90deg, rgba(3, 3, 3, 0.94) 0%, rgba(20, 82, 34, 0.78) 42%, rgba(3, 3, 3, 0.42) 100%),
+    linear-gradient(180deg, rgba(3, 3, 3, 0.72) 0%, rgba(3, 3, 3, 0.12) 30%, rgba(3, 3, 3, 0.35) 70%, rgba(3, 3, 3, 0.88) 100%);
 }
 .hero__canvas {
   position: absolute; inset: 0; z-index: -1;
@@ -507,10 +502,10 @@ em { font-style: italic; }
 .pill {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 9px 18px 9px 14px;
-  border: 1px solid rgba(135, 178, 68, 0.5);
+  border: 1px solid rgba(122, 193, 69, 0.55);
   border-radius: 999px;
-  background: rgba(79, 120, 59, 0.14);
-  color: #b9dc80;
+  background: rgba(60, 163, 72, 0.18);
+  color: #d4f0b8;
   font-size: 13.5px; font-weight: 700; letter-spacing: 0.02em;
   margin-bottom: 30px;
   -webkit-backdrop-filter: blur(6px);
@@ -770,7 +765,7 @@ em { font-style: italic; }
   display: inline-flex; align-items: center; gap: 10px;
   margin-top: 10px;
   font-weight: 800; font-size: 15px;
-  color: #1c6f84;
+  color: #A86028;
   transition: color 0.35s, gap 0.45s var(--ease-out);
 }
 .explore .icon { width: 18px; height: 18px; transition: transform 0.45s var(--ease-out); }
@@ -785,7 +780,7 @@ em { font-style: italic; }
   padding: clamp(96px, 12vw, 160px) 0;
   overflow: hidden;
   background:
-    radial-gradient(60% 50% at 100% 0%, rgba(21, 52, 92, 0.9), transparent 70%),
+    radial-gradient(60% 50% at 100% 0%, rgba(60, 163, 72, 0.45), transparent 70%),
     var(--ink);
 }
 .why__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 7vw, 110px); align-items: center; }
@@ -827,7 +822,7 @@ em { font-style: italic; }
   overflow: hidden;
   display: grid; place-items: center;
   background:
-    linear-gradient(160deg, rgba(21, 52, 92, 0.85), rgba(11, 31, 56, 0.95)),
+    linear-gradient(160deg, rgba(20, 82, 34, 0.88), rgba(3, 3, 3, 0.94)),
     url("../../assets/images/herograss.avif") center / cover;
   border: 1px solid var(--line-dark);
   box-shadow: 0 60px 120px -50px rgba(0, 0, 0, 0.9);
@@ -977,7 +972,7 @@ em { font-style: italic; }
   position: relative;
   display: inline-flex; align-items: center; gap: 6px;
   font-weight: 800;
-  color: #1c6f84;
+  color: #A86028;
   padding-bottom: 4px;
   transition: color 0.3s;
 }
@@ -1144,8 +1139,7 @@ em { font-style: italic; }
   .main-nav, .header-phone { display: none; }
   .menu-toggle { display: block; }
   .mobile-menu { display: grid; }
-  .brand__logo { height: 46px; }
-  .brand__name { font-size: 19px; }
+  .brand__logo { height: 64px; }
 
   .hero { padding-top: calc(var(--header-h) + 36px); align-items: flex-start; }
   .hero__inner { grid-template-columns: 1fr; }
@@ -1171,8 +1165,7 @@ em { font-style: italic; }
   .header-actions { gap: 8px; }
   .header-actions .btn-sm { padding: 9px 14px; font-size: 13px; }
   .brand { gap: 8px; }
-  .brand__logo { height: 40px; }
-  .brand__name { font-size: 16px; }
+  .brand__logo { height: 56px; }
 
   .hero { padding-bottom: 150px; }
   .hero__title { margin-bottom: 24px; }

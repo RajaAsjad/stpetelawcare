@@ -24,9 +24,9 @@
     var s = sprite.getContext('2d');
     var g = s.createRadialGradient(16, 16, 0, 16, 16, 16);
     g.addColorStop(0, 'rgba(255,255,255,1)');
-    g.addColorStop(0.25, 'rgba(225,246,255,0.9)');
-    g.addColorStop(0.6, 'rgba(160,220,245,0.25)');
-    g.addColorStop(1, 'rgba(160,220,245,0)');
+    g.addColorStop(0.25, 'rgba(220,245,200,0.9)');
+    g.addColorStop(0.6, 'rgba(122,193,69,0.28)');
+    g.addColorStop(1, 'rgba(122,193,69,0)');
     s.fillStyle = g;
     s.fillRect(0, 0, 32, 32);
   })();
@@ -156,16 +156,16 @@
     // sun glow
     var glowR = Math.max(W, H) * 0.55;
     var glow = ctx.createRadialGradient(ox - 40, oy + 40, 0, ox - 40, oy + 40, glowR);
-    glow.addColorStop(0, 'rgba(255,221,120,0.55)');
-    glow.addColorStop(0.35, 'rgba(249,185,30,0.16)');
-    glow.addColorStop(1, 'rgba(249,185,30,0)');
+    glow.addColorStop(0, 'rgba(255,180,90,0.5)');
+    glow.addColorStop(0.35, 'rgba(241,106,36,0.16)');
+    glow.addColorStop(1, 'rgba(241,106,36,0)');
     ctx.fillStyle = glow;
     ctx.fillRect(0, 0, W, H);
 
     var grad = ctx.createRadialGradient(ox, oy, 0, ox, oy, len);
-    grad.addColorStop(0, 'rgba(255,230,150,0.34)');
-    grad.addColorStop(0.45, 'rgba(255,214,110,0.10)');
-    grad.addColorStop(1, 'rgba(255,214,110,0)');
+    grad.addColorStop(0, 'rgba(255,196,120,0.32)');
+    grad.addColorStop(0.45, 'rgba(241,106,36,0.10)');
+    grad.addColorStop(1, 'rgba(241,106,36,0)');
 
     var sets = [
       { n: 16, speed: 0.035, width: 0.055, alpha: 1 },
@@ -199,7 +199,7 @@
 
       // streak along velocity
       var tail = d.kind === 'splash' ? 0.012 : 0.022;
-      ctx.strokeStyle = 'rgba(220,244,255,' + (a * 0.55).toFixed(3) + ')';
+      ctx.strokeStyle = 'rgba(210,240,190,' + (a * 0.55).toFixed(3) + ')';
       ctx.lineWidth = d.size;
       ctx.beginPath();
       ctx.moveTo(d.x - d.vx * tail, d.y - d.vy * tail);
